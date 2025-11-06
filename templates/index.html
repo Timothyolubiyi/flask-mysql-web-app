@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+    <link rel="stylesheet" href="../static/style.css"> 
+</head>
+
+<body>
+    <div class="container">
+        <h2>Instant Messaging app</h2>
+       
+        <ul>
+            {% for post in posts %}
+            <li>{{ post[0] }}</li>
+            {% endfor %}
+        </ul>
+        <form action="/submit" method="post">
+            <input type="text" name="new_message" placeholder="Enter a new message">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
